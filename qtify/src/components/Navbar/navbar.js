@@ -6,13 +6,16 @@ import Logo from "../Logo/logo.jsx";
 import SearchBox from '../SearchBox/searchbox.js';
 import Button from "../Button/button.js";
 import styles from "./navbar.module.css";
+import { Link } from '@mui/material';
 
 export default function Navbar() {
   return (
     <Box >
-      <AppBar position="static" sx={{backgroundColor: "#34C94B"}}>
+      <AppBar position="static">
         <Toolbar className={styles.navbar}>
-          <Logo />
+          <Link href="/">
+            <Logo />
+          </Link>
           <SearchBox />
           <Button> Give Feedback </Button>
         </Toolbar>
