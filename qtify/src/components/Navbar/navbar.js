@@ -17,7 +17,7 @@ export default function Navbar() {
             <Logo />
           </Link>
           <SearchBox />
-          <Button className={styles.Button}>Give Feedback</Button>
+          <Button>Give Feedback</Button>
         </Toolbar>
       </AppBar>
     </Box>
