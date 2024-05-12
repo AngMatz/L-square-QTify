@@ -7,8 +7,5 @@
     font-size: 18px;
     line-height: 27px;
     padding: 10px 16px;
-}
-
-.button:hover{
     cursor: pointer;
 }
