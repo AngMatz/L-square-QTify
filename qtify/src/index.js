@@ -3,11 +3,32 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import HomePage from './components/Pages/HomePage/homePage';
+import AlbumsPage from './components/Pages/AlbumsPage/albumsPage'; 
+import {createBrowserRouter, RouterProvider} from "react-router-dom";
+
+const router = createBrowserRouter([
+{
+  path: "/",
+  element: <App />,
+  children: [
+    {
+      path: "/",
+      element: <HomePage />
+    }, 
+    {
+      path: "/album/albumId",
+      element: <AlbumsPage />
+    }
+  ]
+}
+])
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    {/* <App /> */}
+    <RouterProvider router={router}/>
   </React.StrictMode>
 );
 

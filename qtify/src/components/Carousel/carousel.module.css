@@ -1,0 +1,25 @@
+.wrapper{
+margin: 30px 0px;
+}
+
+.leftNavigationIcon{
+    position: relative;
+    left: -15px;
+    top: -170px;
+    border-radius: 50px;
+    height: 25px;
+    width: 25px;
+    background-color: var(--color-primary);
+    z-index: 1;
+}
+
+.rightNavigationIcon{
+    position: relative;
+    right: -1305px;
+    top: -195px;
+    border-radius: 50px;
+    height: 25px;
+    width: 25px;
+    background-color: var(--color-primary);
+    z-index: 1;
+}
