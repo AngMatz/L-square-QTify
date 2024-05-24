@@ -38,9 +38,11 @@ export default function Section({title, data, filterByGenre, type}){
                 <Typography variant="h3" className={styles.titleText}>
                     {title}
                 </Typography>
+                {type==="album" ? (
                 <Typography variant="h4" className={styles.showCollapseText} onClick={handleClick}>
-                    {carousel ? "Show All" : "Collapse All"}
+                    {(carousel) ? "Show All" : "Collapse All"}
                 </Typography>
+                ) : ( <></> )}
             </Box>
             <Box>
                 {showFilters && (
