@@ -33,7 +33,7 @@ export default function Section({title, data, filterByGenre, type}){
         : card);
 
     return (
-        <Box sx={{paddingBottom: "25px"}}>
+        <Box>
             <Box className={styles.header}>
                 <Typography variant="h3" className={styles.titleText}>
                     {title}

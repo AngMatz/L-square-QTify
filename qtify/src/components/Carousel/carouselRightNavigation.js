@@ -1,22 +1,28 @@
 import React, {useEffect, useState} from "react";
 import Box from "@mui/material/Box";
 import {useSwiper} from "swiper/react";
-import ChevronRightIcon from '@mui/icons-material/ChevronRight';
+import {ReactComponent as RightArrow} from '../../assets/rightArrow.svg';
 import styles from "./carousel.module.css";
 
 export default function RightNavigation() {
     const swiper = useSwiper();
-    const [isEnding, setIsEnding] = useState(swiper.IsEnd);
+    const [isEnding, setIsEnding] = useState(swiper.isEnd);
 
     useEffect(()=>{
-        swiper.on("slideChange", function(){
-            setIsEnding(swiper.IsEnd);
-        })
-    }, []);
+        swiper.on('reachEnd', function(){
+            setIsEnding(swiper.isEnd);
+        });
+        
+        swiper.on('slideChange', function(){
+            setIsEnding(swiper.isEnd);
+        });
+    }, [swiper]);
+
+    
 
     return (
         <Box className={styles.rightNavigationIcon}>
-            {!isEnding && <ChevronRightIcon onClick={()=> swiper.slideNext()}/>}
+            {!isEnding && <RightArrow onClick={() => swiper.slideNext()}/>}
         </Box>
     )
 }

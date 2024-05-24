@@ -7,7 +7,7 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
-import {Link} from '@mui/material';
+import {Link} from 'react-router-dom';
 // import AlbumThumbnail from "../../assets/album_thumbnail1.png";
 import styles from "./card.module.css"
 
@@ -17,9 +17,9 @@ export default function SongCard({data, type}){
     if(type==="album") {
         const {image, follows, title, slug, songs} = data;
       return (
-       <Box>
+       <Box className={styles.wrapper}>
         <Tooltip title={`${songs.length} songs`} placement="top" arrow>
-        <Link to={`/album/${slug}`} />
+        <Link to={`/album/${slug}`} style={{textDecoration: "none"}}>
         <Card className={styles.card}>
           <CardActionArea>
             <CardMedia
@@ -37,6 +37,7 @@ export default function SongCard({data, type}){
         <Typography className={styles.text}>
             {title}
         </Typography>
+        </Link>
         </Tooltip>
         </Box>
       );
