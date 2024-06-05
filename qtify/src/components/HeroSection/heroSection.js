@@ -3,7 +3,7 @@ import Box from "@mui/material/Box";
 import heroImage from "../../assets/hero_image.png";
 import Typography from '@mui/material/Typography';
 import Stack from '@mui/material/Stack';
-import styles from "./heroSection.module.css"
+import styles from "./heroSection.module.css";
 
 export default function Hero(){
     return (

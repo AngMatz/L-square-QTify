@@ -37,3 +37,12 @@ export const fetchFilters = async() => {
         console.log(err.response);
     }
 }
+
+export const fetchFAQs = async() => {
+    try{
+        const response = await axios.get(`${backendEndpoint}/faq`);
+        return response.data;
+    }catch(err){
+        console.log(err.response);
+    }
+}
