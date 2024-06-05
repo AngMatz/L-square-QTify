@@ -19,7 +19,8 @@ export default function SongCard({data, type}){
       return (
        <Box className={styles.wrapper}>
         <Tooltip title={`${songs.length} songs`} placement="top" arrow>
-        <Link to={`/album/${slug}`} style={{textDecoration: "none"}}>
+          <Link to="#" style={{textDecoration: "none"}}>
+        {/* <Link to={`/album/${slug}`} style={{textDecoration: "none"}}> */}
         <Card className={styles.card}>
           <CardActionArea>
             <CardMedia
